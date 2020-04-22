@@ -3,7 +3,7 @@ cluster:
   environmentGitOwner: "Abhiyush88"
   environmentGitPublic: false
   project: ""
-  provider: gke
+  provider: kubernetes
   zone: ""
 gitops: true
 environments:
@@ -11,7 +11,8 @@ environments:
 - key: staging
 - key: production
 ingress:
-  domain: ""
+  domain: 10.108.142.112.nip.io
+  ignoreLoadBalancer: true
   externalDNS: false
   tls:
     email: ""
