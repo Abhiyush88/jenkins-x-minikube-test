@@ -1,26 +1,32 @@
+autoUpdate:
+  enabled: false
+  schedule: ""
+bootConfigURL: https://github.com/Abhiyush88/jenkins-x-minikube-test
 cluster:
-  clusterName: "minikube"
-  environmentGitOwner: "Abhiyush88"
-  environmentGitPublic: false
-  project: ""
+  clusterName: minikube
+  environmentGitOwner: Abhiyush88
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
   provider: kubernetes
-  zone: ""
 gitops: true
-environments:
-- key: dev
-- key: staging
-- key: production
 ingress:
   domain: 10.108.142.112.nip.io
-  ignoreLoadBalancer: true
   externalDNS: false
+  ignoreLoadBalancer: true
+  namespaceSubDomain: -jx.
   tls:
     email: ""
     enabled: false
     production: false
 kaniko: true
+repository: nexus
 secretStorage: local
 storage:
+  backup:
+    enabled: false
+    url: ""
   logs:
     enabled: false
     url: ""
@@ -30,7 +36,11 @@ storage:
   repository:
     enabled: false
     url: ""
+vault: {}
+velero:
+  schedule: ""
+  ttl: ""
 versionStream:
-  ref: "master"
+  ref: master
   url: https://github.com/jenkins-x/jenkins-x-versions.git
 webhook: prow
