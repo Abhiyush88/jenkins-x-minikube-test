@@ -1,6 +1,6 @@
 cluster:
-  clusterName: ""
-  environmentGitOwner: ""
+  clusterName: "minikube"
+  environmentGitOwner: "Abhiyush88"
   environmentGitPublic: false
   project: ""
   provider: gke
