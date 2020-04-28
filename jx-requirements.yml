@@ -4,6 +4,8 @@ autoUpdate:
 bootConfigURL: https://github.com/Abhiyush88/jenkins-x-minikube-test
 cluster:
   clusterName: minikube
+  devEnvApprovers:
+  - Abhiyush88
   environmentGitOwner: Abhiyush88
   gitKind: github
   gitName: github
@@ -12,16 +14,16 @@ cluster:
   provider: kubernetes
 gitops: true
 ingress:
-  domain: 10.108.142.112.nip.io
+  domain: 10.98.85.133.nip.io
   externalDNS: false
   ignoreLoadBalancer: true
   namespaceSubDomain: -jx.
   tls:
     email: ""
-    enabled: false
+    enabled: true
     production: false
 kaniko: true
-repository: nexus
+repository: https://kubernetes-charts.storage.googleapis.com
 secretStorage: local
 storage:
   backup:
